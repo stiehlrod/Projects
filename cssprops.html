@@ -1,0 +1,1913 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="CSS Properties for page layout and appearance">
+   <title>Cascading Style Sheets Properties</title>
+   <link rel = "stylesheet" type = "text/css" href = "../css/screen.css">
+      <style type="text/css">
+     h2 { margin-top:20px;}
+     .css_prop_table { border-width:thin; border-style:outset; width: 96%; margin-left:2%;}
+     .css_prop_table th { vertical-align:top; border-width:thin; border-style:inset; padding:5px; }
+     .css_prop_table td { vertical-align:top; border-width:thin; border-style:inset; padding:5px; }
+     .css_prop_table td.prop_name { vertical-align:top; border-width:thin; border-style:inset; padding:5px; white-space:nowrap; }
+     .article_code, .article_code p { padding: 0; margin: 0; font-weight: normal;
+	      font-family:"Courier New", Courier, monospace; color: navy;}
+}
+   </style>
+
+</head>
+<body>
+<div id=layout>
+
+<h1>CSS Properties</h1>
+
+	<ul>
+		<li><a href="#color">Background Properties</a></li>
+		<li><a href="#font">Font Properties</a></li>
+		<li><a href="#text">Text Properties</a></li>
+		<li><a href="#list_properties">List Properties</a></li>
+		<li><a href="#classif">Classification and Positioning Properties</a></li>
+		<li><a href="#box">Box Properties</a><ul>
+  		    <li><a href="#border_properties">Border Properties</a></li>
+  		    <li><a href="#dimension_properties">Dimension Properties</a></li>
+ 			<li><a href="#margin_properties">Margin/Padding Properties</a></li>
+		</ul>
+		</li>
+		<li><a href="#generated_properties">Generated Content Properties</a></li>
+		<li><a href="#outline_properties">Outline Properties</a></li>
+		<li><a href="#page_properties">Page Properties</a></li>
+		<li><a href="#table_properties">Table Properties</a></li>
+		<li><a href="#other_properties">Other Properties</a></li>
+	</ul>
+<h2>Background Properties</h2>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS background properties.">
+	<caption></caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">background-attachment</td>
+		<td>Declares the attachment of a background image (to scroll with the 
+		page content or be in a fixed position). </td>
+		<td>
+		<div class="article_code">
+			fixed<br>scroll </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { background-attachment:fixed; }
+			<p>div { background-attachment:scroll; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">background-color</td>
+		<td>Declares the background color. </td>
+		<td>Valid color names, RGB values, hexidecimal notation. </td>
+		<td>
+		<div class="article_code">
+			div { background-color:green; }
+			<p>div { color:#00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">background-image</td>
+		<td>Declares the background image of an element. </td>
+		<td>URL values. </td>
+		<td>
+		<div class="article_code">
+			div { background-image:url(images/img.jpg); }
+			<p>body { background-image:url(img.jpg); } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">background-position</td>
+		<td>Declares the position of a background image. </td>
+		<td>Lengths or percentages for the x and y positions, or one of the 
+		predefined values:
+		<p class="article_code">top left<br>top center<br>top right<br>center 
+		left<br>center center<br>center right<br>bottom left<br>bottom center<br>
+		bottom right </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { background-position:10px 50px; }
+			<p>div { background-position:bottom right; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">background-repeat</td>
+		<td>Declares how and/or if a background image repeats. </td>
+		<td>
+		<div class="article_code">
+			repeat<br>repeat-x<br>repeat-y<br>no-repeat </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { background-repeat:repeat-x; }
+			<p>div { background-repeat:no-repeat; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">background</td>
+		<td>Used as a shorthand property to set all the background properties at 
+		once. </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">background-color<br>background-image<br>
+		background-repeat <br>background-attachment <br>background-position<br>
+		</p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { background:green url(image.jpg) no-repeat fixed center center; 
+			}
+			<p>div { background:url(image.jpg) fixed; } </p>
+		</div>
+		</td>
+	</tr>
+</table>
+
+<a name="font"></a>
+<h2>Font Properties</h2>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS font properties.">
+	<caption></caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">font-family</td>
+		<td>Declares the name of the font to be used. Previously set in HTML via 
+		the <em>face</em> attribute in a &lt;font&gt; tag. </td>
+		<td>Valid font family names or generic family names, i.e. <em>Arial</em>,
+		<em>Verdana</em>, <em>sans-serif</em>, <em>&quot;Times New Roman&quot;</em>, <em>
+		Times</em>, <em>serif</em>, etc.
+		<p>Font family names can be separated by a comma in the same declaration 
+		to allow additional and/or generic family names to be used if the 
+		prefereed font is unable to be displayed. </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { font-family:Arial; }
+			<p>div { font-family:Arial, Helvetica, sans-serif; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">font-size</td>
+		<td>Declares the size of the font. Previously set in HTML via the <em>
+		size</em> attribute in a &lt;font&gt; tag. </td>
+		<td>Lengths (number and unit type&#8212; i.e. <em>1em</em>, <em>12pt</em>, <em>
+		10px</em>, <em>80%</em>) or one of the following predefined values:
+		<p class="article_code">xx-small<br>x-small<br>small<br>medium<br>large<br>
+		x-large<br>xx-large<br>smaller<br>larger </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { font-size:70%; }
+			<p>div { font-size:0.85em; } </p>
+			<p>div { font-size:medium; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">font-size-adjust</td>
+		<td><strong>Limited browser support: Was part of CSS 2, but not in CSS 
+		2.1. This property may return in CSS 3. </strong>
+		<p>Declares the <em>aspect value</em> (font size divided by x-height).
+		</p>
+		</td>
+		<td>Numeric value</td>
+		<td>
+		<div class="article_code">
+			div { font-size-adjust:0.54; }
+			<p>div { font-size-adjust:0.46; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">font-stretch</td>
+		<td><strong>Limited browser support: Was part of CSS 2, but not in CSS 
+		2.1. This property may return in CSS 3. </strong>
+		<p>Declares the stretch of the font face. </p>
+		</td>
+		<td>normal<br>wider<br>narrower<br>ultra-condensed<br>extra-condensed<br>
+		condensed<br>semi-condensed<br>semi-expanded<br>expanded<br>
+		extra-expanded<br>ultra-expanded </td>
+		<td>
+		<div class="article_code">
+			div { font-stretch:narrower; }
+			<p>div { font-stretch:ultra-expanded; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">font-style</td>
+		<td>Declares the font style.</td>
+		<td>
+		<div class="article_code">
+			normal<br>italic<br>oblique </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { font-style:italic; }
+			<p>div { font-style:oblique; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">font-variant</td>
+		<td>Declares the font variant.</td>
+		<td>
+		<div class="article_code">
+			normal<br>small-caps </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { font-variant:normal; }
+			<p>div { font-variant:small-caps; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">font-weight</td>
+		<td>Declares the font weight (lightness or boldness)</td>
+		<td>
+		<div class="article_code">
+			normal<br>bold<br>bolder<br>lighter<br>100<br>200<br>300<br>400<br>
+			500<br>600<br>700<br>800<br>900 </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { font-weight:bolder; }
+			<p>div { font-weight:200; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">font</td>
+		<td>Used as a shorthand property to declare all of the font properties 
+		at once (except font-size-adjust and font-stretch). </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">font-style<br>font-variant<br>font-weight<br>
+		font-size<br>line-height<br>font-family </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { font:italic small-caps bold 1em 1.2em Arial }
+			<p>div { font:bold 0.8em Verdana } </p>
+		</div>
+		</td>
+	</tr>
+</table>
+<a name="text"></a>
+<h2>Text Properties</h2>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS text properties.">
+	<caption></caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">color</td>
+		<td>Declares the color of the text. </td>
+		<td>Valid color names, RGB values, hexidecimal notation.
+		<p>The predefined color names are: </p>
+		<p class="article_code">aqua<br>black<br>blue <br>fuchsia<br>gray<br>
+		green<br>lime<br>maroon<br>navy<br>olive<br>purple<br>red<br>silver<br>
+		teal<br>white<br>yellow<br></p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { color:green; }
+			<p>div { <span style="white-space:nowrap">color:rgb(0,255,0);</span> 
+			} </p>
+			<p>div { color:#00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">direction</td>
+		<td>Declares the reading direction of the text. </td>
+		<td>
+		<div class="article_code">
+			ltr<br>rtl </div>
+		<p>ltr = left-to-right<br>rtl = right-to-left </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { direction:ltr; }
+			<p>div { direction:rtl; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">line-height</td>
+		<td>Declares the distance between lines. </td>
+		<td>Numbers, percentages, lengths, and the predefined value of
+		<span class="article_code">normal</span>. </td>
+		<td>
+		<div class="article_code">
+			div { line-height:normal; }
+			<p>div { line-height:2em; } </p>
+			<p>div { line-height:125%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">letter-spacing</td>
+		<td>Declares the amount of space between text characters. </td>
+		<td>A length (in addition to the default space) or the predefined value 
+		of <span class="article_code">normal</span>. </td>
+		<td>
+		<div class="article_code">
+			div { letter-spacing:normal; }
+			<p>div { letter-spacing:5px; } </p>
+			<p>div { letter-spacing:-1px; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">text-align</td>
+		<td>Declares the horizontal alignment of inline content. </td>
+		<td>
+		<div class="article_code">
+			left<br>right<br>center<br>justify </div>
+		<p>If used on a set of table cells, this property can be given a string 
+		value to which the text of each row of the column will be aligned. </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { text-align:center; }
+			<p>div { text-align:right; } </p>
+			<p>td { text-align:&quot;.&quot;; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">text-decoration</td>
+		<td>Declares the text decoration. </td>
+		<td>
+		<div class="article_code">
+			none<br>underline<br>overline<br>line-through<br>blink </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { text-decoration:none; }
+			<p>div { text-decoration:underline; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">text-indent</td>
+		<td>Declares the indentation of the first line of text. </td>
+		<td>Lengths and percentages. </td>
+		<td>
+		<div class="article_code">
+			div { text-indent:12px; }
+			<p>div { text-indent:2%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">text-shadow</td>
+		<td>Declares shadow effects on the text. </td>
+		<td>A list containg a color followed by numeric values (separated by 
+		spaces) that specify:
+		<ol>
+			<li>The color for the shadow effect</li>
+			<li>Horizontal distance to the right of the text</li>
+			<li>Vertical distance below the text</li>
+			<li>Blur radius</li>
+		</ol>
+		</td>
+		<td>
+		<div class="article_code">
+			div { text-shadow:green 2px 2px 7px; }
+			<p>div { text-shadow:olive -3px -4px 5px; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">text-transform</td>
+		<td>Declares the capitalization effects on the letters in the text. </td>
+		<td>
+		<div class="article_code">
+			none<br>capitalize<br>uppercase<br>lowercase </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { text-transform:uppercase; }
+			<p>div { text-transform:lowercase; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">unicode-bidi</td>
+		<td>Declares values relating to bidirectional text. May be used in 
+		conjunction with the the <em>direction</em> property. </td>
+		<td>
+		<div class="article_code">
+			normal<br>embed<br>bidi-override </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { unicode-bidi:embed; }
+			<p>div { unicode-bidi:bidi-override; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">white-space</td>
+		<td>Declares how white space is handled in an element. </td>
+		<td>
+		<div class="article_code">
+			normal<br>pre<br>nowrap </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { white-space:pre; }
+			<p>div { white-space:nowrap; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">word-spacing</td>
+		<td>Declares the space between words in the text. </td>
+		<td>A length (in addition to the default space) or the predefined value 
+		of <span class="article_code">normal</span>. </td>
+		<td>
+		<div class="article_code">
+			div { word-spacing:normal; }
+			<p>div { word-spacing:1.5em; } </p>
+		</div>
+		</td>
+	</tr>
+</table>
+
+<a name="list_properties"></a>
+<h2>List Properties</h2>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS list properties.">
+	<caption></caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">list-style-type</td>
+		<td>Declares the type of list marker used. </td>
+		<td>
+		<div class="article_code">
+			disc<br>circle<br>square<br>decimal<br>decimal-leading-zero<br>
+			lower-roman<br>upper-roman<br>lower-alpha<br>upper-alpha<br>
+			lower-greek<br>lower-latin<br>upper-latin<br>hebrew<br>armenian<br>
+			georgian<br>cjk-ideographic<br>hiragana<br>katakana<br>
+			hiragana-iroha<br>katakana-iroha </div>
+		</td>
+		<td>
+		<div class="article_code">
+			ol { list-style-type:upper-roman; }
+			<p>ul { list-style-type:square; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">list-style-position</td>
+		<td>Declares the position of the list marker. </td>
+		<td>
+		<div class="article_code">
+			inside<br>outside </div>
+		</td>
+		<td>
+		<div class="article_code">
+			ol { list-style-position:inside; }
+			<p>ul { list-style-position:outside; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">list-style-image</td>
+		<td>Declares an image to be used as the list marker. </td>
+		<td>URL values. </td>
+		<td>
+		<div class="article_code">
+			ul { list-style-image:url(image.jpg); } </div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">list-style</td>
+		<td>Shorthand property to declare three list properties at once. </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">list-style-type<br>list-style-position<br>
+		list-style-image </p>
+		</td>
+		<td>
+		<div class="article_code">
+			ul { list-style:disc inside url(image.gif); }
+			<p>ol { list-style:upper-roman outside; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">marker-offset</td>
+		<td>Declares the marker offset for elements with a value of
+		<span class="article_keywords">marker</span> set for the
+		<span class="article_keywords">display</span> property. </td>
+		<td>Lengths and the predefined value <span class="article_keywords">auto</span>.
+		</td>
+		<td>
+		<div class="article_code">
+			li:before { display:marker; marker-offset:5px; } </div>
+		</td>
+	</tr>
+</table>
+<a name="classif"></a>
+<h2>Classification and Positioning Properties</h2>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS classification/positioning properties.">
+	<caption></caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">clear</td>
+		<td>Declares the side(s) of an element where no previous floating 
+		elements are allowed to be adjacent. </td>
+		<td>
+		<div class="article_code">
+			left<br>right<br>both<br>none </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { clear:right; }
+			<p>div { clear:both; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">cursor</td>
+		<td>Declares the type of cursor to be displayed. </td>
+		<td>URL values, and the following prefefined values:
+		<p class="article_code">auto<br>crosshair<br>default<br>pointer<br>move<br>
+		e-resize<br>ne-resize<br>nw-resize<br>n-resize<br>se-resize<br>sw-resize<br>
+		s-resize<br>w-resize<br>text<br>wait<br>help </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { cursor:crosshair; }
+			<p>div { cusrsor:url(image.csr); } </p>
+			<p>div { cusrsor:url(image.csr), pointer; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">display</td>
+		<td>Declares if/how the element displays. </td>
+		<td>
+		<div class="article_code">
+			none<br>inline<br>block<br>list-item<br>run-in<br>compact<br>marker<br>
+			table<br>inline-table<br>table-row-group<br>table-header-group<br>
+			table-footer-group<br>table-row<br>table-column-group<br>
+			table-column<br>table-cell<br>table-caption </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { display:none; }
+			<p>div { display:inline; } </p>
+			<p>div { display:marker; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">float</td>
+		<td>Declares whether a box should float to the left or right of other 
+		content, or whether it should not be floated at all. </td>
+		<td>
+		<div class="article_code">
+			left<br>right<br>none </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { float:left; }
+			<p>div { float:right; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">visibility</td>
+		<td>Declares the visibility of boxes generated by an element. </td>
+		<td>visible<br>hidden<br>collapse </td>
+		<td>
+		<div class="article_code">
+			div { visibility:visible; }
+			<p>div { visibility:hidden; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">top</td>
+		<td>Declares the distance that the top content edge of the element is 
+		offset below the top edge of its containing block. The
+		<span class="article_keywords">position</span> property of the element 
+		must also be set to a value other than <span class="article_keywords">
+		static</span>. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { top:15px; }
+			<p>div { top:2%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">right</td>
+		<td>Declares the distance that the right content edge of the element is 
+		offset to the left of the right edge of its containing block. The
+		<span class="article_keywords">position</span> property of the element 
+		must also be set to a value other than <span class="article_keywords">
+		static</span>. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { right:15px; }
+			<p>div { right:2%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">bottom</td>
+		<td>Declares the distance that the bottom content edge of the element is 
+		offset above the bottom edge of its containing block. The
+		<span class="article_keywords">position</span> property of the element 
+		must also be set to a value other than <span class="article_keywords">
+		static</span>. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { bottom:15px; }
+			<p>div { bottom:2%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">left</td>
+		<td>Declares the distance that the left content edge of the element is 
+		offset to the right of the left edge of its containing block. The
+		<span class="article_keywords">position</span> property of the element 
+		must also be set to a value other than <span class="article_keywords">
+		static</span>. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { left:15px; }
+			<p>div { left:2%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">position</td>
+		<td>Declares the type of positioning of an element. </td>
+		<td>
+		<div class="article_code">
+			static<br>relative<br>absolute<br>fixed </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { position:absolute; }
+			<p>div { position:relative; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">clip</td>
+		<td>Declares the shape of a clipped region when the value of the
+		<span class="article_keywords">overflow</span> property is set to a 
+		value other than <span class="article_keywords">visible</span>. </td>
+		<td>Shapes, or the predefined value <span class="article_keywords">auto</span>.
+		<p>In CSS 2, the only valid shape is a rectangle, using the following 
+		format to specify the offset lengths from each side of the box: </p>
+		<p class="article_code">rect(top, right, bottom, left) </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { clip:auto; }
+			<p>div { clip:rect(2px, 4px, 7px, 5px); } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">overflow</td>
+		<td>Declares how content that overflows the element's box is handled.
+		</td>
+		<td>
+		<div class="article_code">
+			visible<br>hidden<br>scroll<br>auto </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { overflow:hidden; }
+			<p>div { overflow:scroll; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">vertical-align</td>
+		<td>Declares the vertical alignment of an inline-level element or a 
+		table cell. </td>
+		<td>Lengths, percentages, and the following predefined values:
+		<p class="article_code">baseline<br>sub<br>super<br>top<br>text-top<br>
+		middle<br>bottom<br>text-bottom </p>
+		</td>
+		<td>
+		<div class="article_code">
+			span { vertical-align:middle; }
+			<p>td { vertical-align:top; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">z-index</td>
+		<td>Declares the stack order of the element. </td>
+		<td>Integer values and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { z-index:2; }
+			<p>div { z-index:auto; } </p>
+		</div>
+		</td>
+	</tr>
+</table>
+<a name="box"></a>
+<h2>Box Properties</h2>
+<a name="border_properties"></a>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS border properties.">
+	<caption>Border Properties</caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">border-top-color</td>
+		<td>Declares the color of the top border. </td>
+		<td>Valid color names, RGB values, hexidecimal notation, or the 
+		predefined value <span class="article_keywords">transparent</span>. </td>
+		<td>
+		<div class="article_code">
+			div { border-top-color:green; }
+			<p>div { border-top-color:#00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-top-style</td>
+		<td>Declares the style of the top border. </td>
+		<td>
+		<div class="article_code">
+			none<br>hidden<br>dotted<br>dashed<br>solid<br>double<br>groove<br>
+			ridge<br>inset<br>outset </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-top-style:solid; }
+			<p>div { border-top-style:inset; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-top-width</td>
+		<td>Declares the width of the top border. </td>
+		<td>Lengths or the following predefined values:
+		<p class="article_code">thin<br>medium<br>thick </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-top-width:2px; }
+			<p>div { border-top-width:thin; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-top</td>
+		<td>Used as a shorthand property to set all the border-top properties at 
+		once. </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">border-top-width<br>border-top-style<br>
+		border-top-color </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-top:2px solid green; }
+			<p>div { border-top:thick double #00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-right-color</td>
+		<td>Declares the color of the right border. </td>
+		<td>Valid color names, RGB values, hexidecimal notation, or the 
+		predefined value <span class="article_keywords">transparent</span>. </td>
+		<td>
+		<div class="article_code">
+			div { border-right-color:green; }
+			<p>div { border-right-color:#00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-right-style</td>
+		<td>Declares the style of the right border. </td>
+		<td>
+		<div class="article_code">
+			none<br>hidden<br>dotted<br>dashed<br>solid<br>double<br>groove<br>
+			ridge<br>inset<br>outset </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-right-style:solid; }
+			<p>div { border-right-style:inset; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-right-width</td>
+		<td>Declares the width of the right border. </td>
+		<td>Lengths or the following predefined values:
+		<p class="article_code">thin<br>medium<br>thick </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-right-width:2px; }
+			<p>div { border-right-width:thin; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-right</td>
+		<td>Used as a shorthand property to set all the border-right properties 
+		at once. </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">border-right-width<br>border-right-style<br>
+		border-right-color </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-right:2px solid green; }
+			<p>div { border-right:thick double #00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-bottom-color</td>
+		<td>Declares the color of the bottom border. </td>
+		<td>Valid color names, RGB values, hexidecimal notation, or the 
+		predefined value <span class="article_keywords">transparent</span>. </td>
+		<td>
+		<div class="article_code">
+			div { border-bottom-color:green; }
+			<p>div { border-bottom-color:#00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-bottom-style</td>
+		<td>Declares the style of the bottom border. </td>
+		<td>
+		<div class="article_code">
+			none<br>hidden<br>dotted<br>dashed<br>solid<br>double<br>groove<br>
+			ridge<br>inset<br>outset </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-bottom-style:solid; }
+			<p>div { border-bottom-style:inset; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-bottom-width</td>
+		<td>Declares the width of the bottom border. </td>
+		<td>Lengths or the following predefined values:
+		<p class="article_code">thin<br>medium<br>thick </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-bottom-width:2px; }
+			<p>div { border-bottom-width:thin; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-bottom</td>
+		<td>Used as a shorthand property to set all the border-bottom properties 
+		at once. </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">border-bottom-width<br>border-bottom-style<br>
+		border-bottom-color </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-bottom:2px solid green; }
+			<p>div { border-bottom:thick double #00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-left-color</td>
+		<td>Declares the color of the left border. </td>
+		<td>Valid color names, RGB values, hexidecimal notation, or the 
+		predefined value <span class="article_keywords">transparent</span>. </td>
+		<td>
+		<div class="article_code">
+			div { border-left-color:green; }
+			<p>div { border-left-color:#00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-left-style</td>
+		<td>Declares the style of the left border. </td>
+		<td>
+		<div class="article_code">
+			none<br>hidden<br>dotted<br>dashed<br>solid<br>double<br>groove<br>
+			ridge<br>inset<br>outset </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-left-style:solid; }
+			<p>div { border-left-style:inset; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-left-width</td>
+		<td>Declares the width of the left border. </td>
+		<td>Lengths or the following predefined values:
+		<p class="article_code">thin<br>medium<br>thick </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-left-width:2px; }
+			<p>div { border-left-width:thin; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-left</td>
+		<td>Used as a shorthand property to set all the border-left properties 
+		at once. </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">border-left-width<br>border-left-style<br>
+		border-left-color </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-left:2px solid green; }
+			<p>div { border-left:thick double #00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-color</td>
+		<td>Declares the border color of all four borders at once. </td>
+		<td>Valid color names, RGB values, hexidecimal notation, or the 
+		predefined value <span class="article_keywords">transparent</span>.
+		<p>Separate the color for each border by a space, declaring the colors 
+		for the borders in the following order: </p>
+		<p class="article-code">border-top-color<br>border-right-color<br>
+		border-bottom-color<br>border-left-color </p>
+		<p>Undeclared values work as further shorthand notation. If only one 
+		color value is declared, all four borders will use that color. If two 
+		colors are declared, the top and bottom borders will use the first color 
+		while the right and left borders will use the second color. If three 
+		colors are declared, the top border will use the first color, the right 
+		and left borders will use the second color, and the bottom border will 
+		use the third color. </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-color:green red blue olive; }
+			<p>div { border-color:green; } </p>
+			<p>div { border-color:green red; } </p>
+			<p>div { border-color:green red blue; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-style</td>
+		<td>Declares the border style of all four borders at once. </td>
+		<td>
+		<div class="article_code">
+			none<br>hidden<br>dotted<br>dashed<br>solid<br>double<br>groove<br>
+			ridge<br>inset<br>outset </div>
+		<p>Undeclared values work as further shorthand notation. If only one 
+		style value is declared, all four borders will use that style. If two 
+		styles are declared, the top and bottom borders will use the first style 
+		while the right and left borders will use the second style. If three 
+		styles are declared, the top border will use the first style, the right 
+		and left borders will use the second style, and the bottom border will 
+		use the third style. </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-style:solid dotted dashed double; }
+			<p>div { border-style:solid; } </p>
+			<p>div { border-style:solid dotted; } </p>
+			<p>div { border-style:solid dotted dashed; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-width</td>
+		<td>Declares the width of all four borders at once. </td>
+		<td>Lengths or the following predefined values:
+		<p class="article_code">thin<br>medium<br>thick </p>
+		<p>Undeclared values work as further shorthand notation. If only one 
+		width value is declared, all four borders will use that width. If two 
+		widths are declared, the top and bottom borders will use the first width 
+		while the right and left borders will use the second width. If three 
+		widths are declared, the top border will use the first width, the right 
+		and left borders will use the second width, and the bottom border will 
+		use the third width. </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border-width:1px 3px 5px 2px; }
+			<p>div { border-width:thin; } </p>
+			<p>div { border-width:2px 4px; } </p>
+			<p>div { border-width:2px 4px 5px; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border</td>
+		<td>Used as a shorthand to declare the border properties when all four 
+		borders will have the same appearance. </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">border-width<br>border-style<br>border-color </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { border:1px double green; }
+			<p>div { border:thin solid #00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+</table>
+<a name="dimension_properties"></a>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS dimension properties.">
+	<caption>Dimension Properties</caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">height</td>
+		<td>Declares the height of the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { height:200px; }
+			<p>div { height:50%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">max-height</td>
+		<td>Declares the maximum height of the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { max-height:200px; }
+			<p>div { max-height:50%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">min-height</td>
+		<td>Declares the minimum height of the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { min-height:200px; }
+			<p>div { min-height:50%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">width</td>
+		<td>Declares the width of the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { width:500px; }
+			<p>div { width:75%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">max-width</td>
+		<td>Declares the maximum width of the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { max-width:500px; }
+			<p>div { max-width:75%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">min-width</td>
+		<td>Declares the minimum width of the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { min-width:500px; }
+			<p>div { min-width:75%; } </p>
+		</div>
+		</td>
+	</tr>
+</table>
+<a name="margin_properties"></a>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS margin properties.">
+	<caption>Margin Properties</caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">margin-top</td>
+		<td>Declares the top margin for the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { margin-top:5px; }
+			<p>div { margin-top:15%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">margin-right</td>
+		<td>Declares the right margin for the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { margin-right:5px; }
+			<p>div { margin-right:15%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">margin-bottom</td>
+		<td>Declares the bottom margin for the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { margin-bottom:5px; }
+			<p>div { margin-bottom:15%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">margin-left</td>
+		<td>Declares the left margin for the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { margin-left:5px; }
+			<p>div { margin-left:15%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">margin</td>
+		<td>Shorthand property used to declare all the margin properties at 
+		once. </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">margin-top<br>margin-right<br>margin-bottom<br>
+		margin-left<br></p>
+		<p>Undeclared values work as further shorthand notation. If only one 
+		length value is declared, all four margins will use that length. If two 
+		lengths are declared, the top and bottom margins will use the first 
+		length while the right and left margins will use the second length. If 
+		three lengths are declared, the top margin will use the first length, 
+		the right and left margins will use the second length, and the bottom 
+		margin will use the third length. </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { margin:5px 12px 4px 7px; }
+			<p>div { margin:5px; } </p>
+			<p>div { margin:5px 10px; } </p>
+			<p>div { margin:5px 7px 4px; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">padding-top</td>
+		<td>Declares the top padding for the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { padding-top:5px; }
+			<p>div { padding-top:15%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">padding-right</td>
+		<td>Declares the right padding for the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { padding-right:5px; }
+			<p>div { padding-right:15%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">padding-bottom</td>
+		<td>Declares the bottom padding for the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { padding-bottom:5px; }
+			<p>div { padding-bottom:15%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">padding-left</td>
+		<td>Declares the left padding for the element. </td>
+		<td>Lengths, percentages, and the predefined value
+		<span class="article_keywords">auto</span>. </td>
+		<td>
+		<div class="article_code">
+			div { padding-left:5px; }
+			<p>div { padding-left:15%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">padding</td>
+		<td>Shorthand property used to declare all the margin properties at 
+		once. </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">padding-top<br>padding-right<br>padding-bottom<br>
+		padding-left<br></p>
+		<p>Undeclared values work as further shorthand notation. If only one 
+		length value is declared, all four sides will use that length. If two 
+		lengths are declared, the top and bottom sides will use the first length 
+		while the right and left sides will use the second length. If three 
+		lengths are declared, the top side will use the first length, the right 
+		and left sides will use the second length, and the bottom side will use 
+		the third length. </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { padding:5px 12px 4px 7px; }
+			<p>div { padding:5px; } </p>
+			<p>div { padding:5px 10px; } </p>
+			<p>div { padding:5px 7px 4px; } </p>
+		</div>
+		</td>
+	</tr>
+</table>
+<a name="generated_properties"></a>
+<h2>Generated Content Properties</h2>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS generated content properties.">
+	<caption></caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">content</td>
+		<td>Generates content in the document in conjunction with the
+		<span class="article_keywords">:before</span> and
+		<span class="article_keywords">:after</span> pseudo-elements. </td>
+		<td>String values, URL values, and predefined value formats:
+		<p class="article_code">counter(name)<br>counter(name, list-style-type)<br>
+		counters(name, string)<br>counters(name, string, list-style-type)<br>
+		attr(X)<br>open-quote<br>close-quote<br>no-open-quote<br>no-close-quote
+		</p>
+		</td>
+		<td>
+		<div class="article_code">
+			div:before { content:&quot;some text&quot;; }
+			<p>div:after { content:url(page2.html); } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">counter-increment</td>
+		<td>Declares the counter increment for each instance of a selector. </td>
+		<td>Integers and the predefined value <span class="article_keywords">
+		none</span>. </td>
+		<td>
+		<a href="http://www.w3.org/TR/REC-CSS2/generate.html#propdef-counter-increment">
+		More Information</a> </td>
+	</tr>
+	<tr>
+		<td class="prop_name">counter-reset</td>
+		<td>Declares the value the counter is set to on each instance of a 
+		selector. </td>
+		<td>Integers and the predefined value <span class="article_keywords">
+		none</span>. </td>
+		<td>
+		<a href="http://www.w3.org/TR/REC-CSS2/generate.html#propdef-counter-reset">
+		More Information</a> </td>
+	</tr>
+	<tr>
+		<td class="prop_name">quotes</td>
+		<td>Declares the type of quotation marks to use for quotations and 
+		embedded quotations. </td>
+		<td>String values and the predefined value
+		<span class="article_keywords">none</span>. </td>
+		<td>
+		<a href="http://www.w3.org/TR/REC-CSS2/generate.html#propdef-quotes">
+		More Information</a> </td>
+	</tr>
+</table>
+
+<a name="outline_properties"></a>
+<h2>Outline Properties</h2>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS outline properties.">
+	<caption></caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">outline-color</td>
+		<td>Declares the outline color. </td>
+		<td>Valid color names, RGB values, hexidecimal notation. </td>
+		<td>
+		<div class="article_code">
+			div { outline-color:green; }
+			<p>div { outline-color:#00FF00; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">outline-style</td>
+		<td>Declares the style of the outline. </td>
+		<td>
+		<div class="article_code">
+			none<br>dotted<br>dashed<br>solid<br>double<br>groove<br>ridge<br>
+			inset<br>outset </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { outline-style:solid; }
+			<p>div { outline-style:inset; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">outline-width</td>
+		<td>Declares the width of the outline. </td>
+		<td>Lengths or the following predefined values:
+		<p class="article_code">thin<br>medium<br>thick </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { outline-width:2px; }
+			<p>div { outline-width:thin; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">outline</td>
+		<td>Used as a shorthand property to set all the background properties at 
+		once. </td>
+		<td>Separate values by a space in the following order (those that are 
+		not defined will use inherited or default initial values):
+		<p class="article_code">outline-color<br>outline-style<br>outline-width
+		</p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { outline:green solid 2px; }
+			<p>div { outline:#00FF00 double thick; } </p>
+		</div>
+		</td>
+	</tr>
+</table>
+<a name="page_properties"></a>
+<h2>Page Properties</h2>
+<table class="css_prop_table" summary="A data table of four columns displaying CSS page properties.">
+	<caption></caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">marks</td>
+		<td>Declares the type of marks to display outside the page box. </td>
+		<td>
+		<div class="article_code">
+			crop<br>cross </div>
+		</td>
+		<td>
+		<div class="article_code">
+			@page { marks:crop; } </div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">orphans</td>
+		<td>Declares the minimum number of lines of a paragraph that must be 
+		left at the bottom of a page. </td>
+		<td>Integers </td>
+		<td>
+		<div class="article_code">
+			@page { orphans:2; } </div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">page</td>
+		<td>Declares the type of page where an element should be displayed. </td>
+		<td>Indentifiers </td>
+		<td><a href="http://www.w3.org/TR/REC-CSS2/page.html#propdef-page">More 
+		Information</a> </td>
+	</tr>
+	<tr>
+		<td class="prop_name">page-break-after</td>
+		<td>Declares a page break. </td>
+		<td>
+		<div class="article_code">
+			auto<br>always<br>avoid<br>left<br>right </div>
+		</td>
+		<td>
+		<a href="http://www.w3.org/TR/REC-CSS2/page.html#propdef-page-break-after">
+		More Information</a> </td>
+	</tr>
+	<tr>
+		<td class="prop_name">page-break-before</td>
+		<td>Declares a page break. </td>
+		<td>
+		<div class="article_code">
+			auto<br>always<br>avoid<br>left<br>right </div>
+		</td>
+		<td>
+		<a href="http://www.w3.org/TR/REC-CSS2/page.html#propdef-page-break-before">
+		More Information</a> </td>
+	</tr>
+	<tr>
+		<td class="prop_name">page-break-inside</td>
+		<td>Declares a page break. </td>
+		<td>
+		<div class="article_code">
+			auto<br>avoid<br></div>
+		</td>
+		<td>
+		<a href="http://www.w3.org/TR/REC-CSS2/page.html#propdef-page-break-inside">
+		More Information</a> </td>
+	</tr>
+	<tr>
+		<td class="prop_name">size</td>
+		<td>Declares the size and orientation of a page box. </td>
+		<td>Lengths, and the following predefined values:
+		<p class="article_code">auto<br>landscape<br>potrait </p>
+		</td>
+		<td><a href="http://www.w3.org/TR/REC-CSS2/page.html#propdef-size">More 
+		Information</a> </td>
+	</tr>
+	<tr>
+		<td class="prop_name">widows</td>
+		<td>Declares the minimum number of lines of a paragraph that must be 
+		left at the top of a page. </td>
+		<td>Integers </td>
+		<td>
+		<div class="article_code">
+			@page { widows:2; } </div>
+		</td>
+	</tr>
+</table>
+<a name="table_properties"></a>
+<h2>Table Properties</h2>
+<table class="css_prop_table" summary="A data table of four columns displaying the CSS table properties.">
+	<caption></caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">border-collapse</td>
+		<td>Declares the way borders are displayed. </td>
+		<td>
+		<div class="article_code">
+			collapse<br>separate </div>
+		</td>
+		<td>
+		<div class="article_code">
+			table { border-collapse:collapse; }
+			<p>table { border-collapse:separate; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">border-spacing</td>
+		<td>Declares the distance separating borders (if
+		<span class="article_keywords">border-collapse</span> is
+		<span class="article_keywords">separate</span>). </td>
+		<td>Lengths for the horizontal and vertical spacing, separated by a 
+		space.
+		<p>If one length is value is declared, that length is used for both the 
+		horizontal and vertical spacing. If two lengths are declared, the first 
+		one is used for horizontal spacing and the second one is used for 
+		vertical spacing. </p>
+		</td>
+		<td>
+		<div class="article_code">
+			table { border-spacing:5px; }
+			<p>table { border-spacing:5px 10px; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">caption-side</td>
+		<td>Declares where the table caption is displayed in relation to the 
+		table. </td>
+		<td>
+		<div class="article_code">
+			top<br>bottom<br>left<br>right </div>
+		</td>
+		<td>
+		<div class="article_code">
+			caption { caption-side:top; }
+			<p>caption { caption-side:right; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">empty-cells</td>
+		<td>Declares the way empty cells are displayed (if
+		<span class="article_keywords">border-collapse</span> is
+		<span class="article_keywords">separate</span>). </td>
+		<td>
+		<div class="article_code">
+			show<br>hide </div>
+		</td>
+		<td>
+		<div class="article_code">
+			table { empty-cells:show; }
+			<p>table { empty-cells:hide; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">table-layout</td>
+		<td>Declares the type of table layout. </td>
+		<td>
+		<div class="article_code">
+			auto<br>fixed </div>
+		</td>
+		<td>
+		<div class="article_code">
+			table { table-layout:auto; }
+			<p>table { table-layout:fixed; } </p>
+		</div>
+		</td>
+	</tr>
+</table>
+<a name="other_properties"></a>
+<h2>Other Properties</h2>
+<table class="css_prop_table" summary="A data table of four columns displaying other CSS properties.">
+	<caption></caption>
+	<tr>
+		<th scope="col">Property</th>
+		<th scope="col">Description</th>
+		<th scope="col">Possible Values</th>
+		<th scope="col">Examples</th>
+	</tr>
+	<tr>
+		<td class="prop_name">azimuth</td>
+		<td>Declares the angle that sound travels to the listener. </td>
+		<td>Angle values in degrees (deg), or one of the following predefined 
+		values:
+		<p class="article_code">left-side<br>far-left <br>left <br>center-left
+		<br>center <br>center-right <br>right <br>far-right <br>right-side <br>
+		behind <br>leftwards <br>rightwards </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { azimuth:90deg; }
+			<p>div { azimuth:behind; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">cue-after</td>
+		<td>Declares an audio cue to play after an element. </td>
+		<td>URL values and the predefined value <span class="article_keywords">
+		none</span>. </td>
+		<td>
+		<div class="article_code">
+			div { cue-after:url(sound.wav); }
+			<p>div { cue-after:none; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">cue-before</td>
+		<td>Declares an audio cue to play before an element. </td>
+		<td>URL values and the predefined value <span class="article_keywords">
+		none</span>. </td>
+		<td>
+		<div class="article_code">
+			div { cue-before:url(sound.wav); }
+			<p>div { cue-before:none; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">cue</td>
+		<td>Shorthand proerty to set both cue values at once. </td>
+		<td>URL values and the predefined value <span class="article_keywords">
+		none</span>. Separate the values by a space in the following order:
+		<p class="article_code">cue-before<br>cue-after </p>
+		<p>If only one cue value is declared, it is used for both before and 
+		after. </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { cue:url(sound.wav) url(sound2.wav); }
+			<p>div { cue:url(sound.wav); } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">elevation</td>
+		<td>Declares the elevation of a sound. </td>
+		<td>Angle values in degrees (deg), or one of the following predefined 
+		values:
+		<p class="article_code">below<br>level<br>above<br>higher<br>lower </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { elevation:30deg; }
+			<p>div { elevation:higher; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">pause-after</td>
+		<td>Declares the amount of time to pause after an element. </td>
+		<td>Time in milliseconds (ms) or percentages. </td>
+		<td>
+		<div class="article_code">
+			div { pause-after:100ms; }
+			<p>div { pause-after:20%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">pause-before</td>
+		<td>Declares the amount of time to pause before an element. </td>
+		<td>Time in milliseconds (ms) or percentages. </td>
+		<td>
+		<div class="article_code">
+			div { pause-before:100ms; }
+			<p>div { pause-before:20%; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">pause</td>
+		<td>Shorthand proerty to set both pause values at once. </td>
+		<td>Separate the values by a space in the following order:
+		<p class="article_code">pause-before<br>pause-after </p>
+		<p>If only one pause value is declared, it is used for both before and 
+		after. </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { pause:200ms 100ms; }
+			<p>div { pause:100ms; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">pitch</td>
+		<td>Declares the average speaking pitch of a voice. </td>
+		<td>Frequencies in hertz (Hz) or the following predefined values:
+		<p class="article_code">x-low<br>low<br>medium<br>high<br>x-high </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { pitch:120Hz; }
+			<p>div { pitch:high; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">pitch-range</td>
+		<td>Declares a change in the pitch range of a voice. </td>
+		<td>Number values between 0 and 100 (lower values indicate a flat voice 
+		while higher values indicate an animated voice). </td>
+		<td>
+		<div class="article_code">
+			div { pitch-range:50; }
+			<p>div { pitch-range:99; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">play-during</td>
+		<td>Declares a background sound to be played while the current element 
+		is spoken. </td>
+		<td>URL value, followed by one or more of the following keywords, 
+		separated by spaces:
+		<p class="article_code">mix<br>repeat<br></p>
+		<p>Alternatley, one of the following keywords: </p>
+		<p class="article_code">auto<br>none </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { play-during:url(music.wav); }
+			<p>div { play-during:url(music.wav) repeat; } </p>
+			<p>div { play-during:none; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">richness</td>
+		<td>Declares the richness of the voice in spoken text. </td>
+		<td>Numeric values between 0 and 100 (lower values have less richness 
+		and higher values have more richness). </td>
+		<td>
+		<div class="article_code">
+			div { richness:50; }
+			<p>div { richness:0; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">speak</td>
+		<td>Declares if/how text is spoken. </td>
+		<td>
+		<div class="article_code">
+			normal<br>none<br>spell-out </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { speak:none; }
+			<p>div { speak:spell-out; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">speak-header</td>
+		<td>Declares how often table header cells are spoken. </td>
+		<td>
+		<div class="article_code">
+			once<br>always </div>
+		</td>
+		<td>
+		<div class="article_code">
+			th { speak-header:once; }
+			<p>th { speak-header:always; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">speak-numeral</td>
+		<td>Declares how numerals are spoken. </td>
+		<td>
+		<div class="article_code">
+			digits<br>continuous </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { speak-numeral:digits; }
+			<p>div { speak-numeral:continuous; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">speak-punctuation</td>
+		<td>Declares how punctuation is spoken. </td>
+		<td>
+		<div class="article_code">
+			code<br>none </div>
+		</td>
+		<td>
+		<div class="article_code">
+			div { speak-punctuation:code; }
+			<p>div { speak-punctuation:none; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">speech-rate</td>
+		<td>Declares the speech rate of spoken text. </td>
+		<td>A number indicating the number of words per minute, or one of the 
+		following predefined values:
+		<p class="article_code">x-slow<br>slow<br>medium<br>fast<br>x-fast<br>
+		faster<br>slower </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { speech-rate:50; }
+			<p>div { speech-rate:medium; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">stress</td>
+		<td>Declares the stress of the voice on spoken text. </td>
+		<td>Numeric values between 0 and 100 (lower values have less stress and 
+		higher values have more stress). </td>
+		<td>
+		<div class="article_code">
+			div { stress:50; }
+			<p>div { stress:0; } </p>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="prop_name">voice-family</td>
+		<td>Declares the voice family of spoken text. </td>
+		<td>Generic or specific voice family names. </td>
+		<td>
+		<a href="http://www.w3.org/TR/REC-CSS2/aural.html#propdef-voice-family">
+		More Information</a> </td>
+	</tr>
+	<tr>
+		<td class="prop_name">volume</td>
+		<td>Declares the median volume. </td>
+		<td>Numbers between 0 and 100, percentages, or one of the following 
+		predefined values:
+		<p class="article_code">silent<br>x-soft<br>soft<br>medium<br>loud<br>
+		x-loud </p>
+		</td>
+		<td>
+		<div class="article_code">
+			div { volume:50; }
+			<p>div { volume:silent; } </p>
+		</div>
+		</td>
+	</tr>
+</table>
+<br>
+</div>
+</body>
+</html>
