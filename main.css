@@ -4,25 +4,22 @@ body {
   background: linear-gradient(purple, pink);
 	font-family: helvetica;
 	font: italic;
+	padding: 5px 15px 0 15px;
 }
 
 h1{
 	/*background: rgb(150, 30, 145);*/
 	color: white;
-	padding: 5px 15px 0 15px
+	padding: 5px 15px 0 15px;
 }
-h2, p, li {
+h2, p, li, h3 {
 	color: white; /*rgb(150, 30, 145);*/
+	padding: 5px 15px 0 15px;
 }
 
 a{
-	color: rgb(76, 68, 78);
-}
-
-p{
-	/*background: rgb(76, 68, 78);*/
-	/*color: green;*/
-	padding: 10px 10px 0px 0px;
+	color: white;/*rgb(150, 30, 145);*/
+	padding: 5px 15px 0 15px;
 }
 
 .secondary{
@@ -32,33 +29,37 @@ p{
 
 nav ul{
 	margin: 0;
+	padding: 5px 15px 0 15px;
 }
 
 nav ul li {
 	margin: 0;
-	padding: 5px 15px;
-	background: black;
+	background: white;
 	color: white;
 	display: inline-block;
 	list-style-type: none;
+	padding: 5px 15px 0 15px;
 }
 
 
 .row:after {
 	clear: both;
+	padding: 5px 15px 0 15px;
 
 }
 
 .col {
-	background: #333;
+	background: white;
 	border-radius: 5px;
 	padding: 10 px .5%;
 	margin: 5px;
 	float: left;
 	margin: 1%;
 	width: 31%;
+	padding: 5px 15px 0 15px;
 }
 
 footer {
 	clear: both;
+	padding: 5px 15px 0 15px;
 }
