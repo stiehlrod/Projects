@@ -8,12 +8,12 @@ body {
 }
 
 img{
-	padding: 2% 15% 2% 5%;
+	/*padding: 2% 15% 2% 5%;
 	/*border: 10px;
 	border-color: white;
-	border-style: solid;*/
+	border-style: solid;
 	width: 90%;
-	length: 60%;
+	length: 60%;*/
 }
 h1, h2, p {
 	color: white; /*rgb(150, 30, 145);*/
@@ -78,6 +78,7 @@ ul, ol{
 	grid-row-start: 2;
 	grid-row-end: 3;
 	background-color: navy;
+  
 }
 .gridNavBarC2 {
 	grid-column-start: 3;
@@ -108,10 +109,10 @@ ul, ol{
 	background-color: navy;
 }
 .gridImg {
-	grid-column-start: 4;
-	grid-column-end: 6;
+	grid-column-start: 2;
+	grid-column-end: 12;
 	grid-row-start: 4;
-	grid-row-end: 7;
+	grid-row-end: 4;
 	/*background-color: navy;*/
 }
 .gridListHeader {
